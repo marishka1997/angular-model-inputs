@@ -1,0 +1,9 @@
+<h2>Description</h2>
+<button style='background-color: green; color: black;' class="info-toggle" (click)="expand.set(!expand())">
+    {{ expand() ? 'Less Info' : 'More Info' }}
+</button>
+@if (expand()) {
+<section class="more-info">
+    <h3 style='color: blue; font-size: large;'>Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. </h3>
+</section>
+}

@@ -1,13 +1,23 @@
 <h1 style='color: red;'>Angular Model Inputs DEMO</h1>
-<div>
   <!-- Example 1 -->
+<div>
   <h2>Value using ngModel</h2>
   <app-model-input [(value)]="name" />
   <span> {{ name }} </span>
 </div>
 <div>
-  <!-- Example 2 -->
   <h2>Value using Model Signal Input</h2>
   <app-model-input [(value)]="nameSignal" />
   <span> {{ nameSignal() }} </span>
 </div>
+
+<!-- Example 2 -->
+<div class="header">
+  <img class="logo" src="../assets/angular-logo.png" width="350px" height="200px" alt="Angular Logo">
+
+  <button style="background-color: yellow; color: black;" class="toggle-button" (click)="showMore.set(!showMore())">
+    {{ showMore() ? 'Collapse' : 'Expand' }} Banner
+  </button>
+</div>
+
+<app-banner [(expand)]="showMore" />
